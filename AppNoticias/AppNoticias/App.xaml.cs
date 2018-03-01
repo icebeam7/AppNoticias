@@ -13,7 +13,7 @@ namespace AppNoticias
         {
             InitializeComponent();
 
-            MainPage = new AppNoticias.MainPage();
+            MainPage = new AppNoticias.Paginas.PaginaNoticias();
         }
 
         protected override void OnStart()

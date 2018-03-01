@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AppNoticias.Paginas.PaginaNoticias">
+    <ContentPage.Content>
+        <StackLayout>
+            <ListView x:Name="lsvChat" SeparatorColor="Black" BackgroundColor="White" SeparatorVisibility="Default">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <Label HeightRequest="50" Margin="10" VerticalOptions="CenterAndExpand" Text="{Binding Message}" FontSize="16"/>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+
+            <StackLayout Orientation="Horizontal" BackgroundColor="Yellow">
+                <Entry x:Name="txtMessage" Placeholder="Send a message to NoticiasBot" HorizontalOptions="StartAndExpand" VerticalOptions="Center" FontSize="20" WidthRequest="300"/>
+                <Button x:Name="btnSend" Text="Send" Clicked="btnSend_Clicked" HorizontalOptions="EndAndExpand" VerticalOptions="Center"/>
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
